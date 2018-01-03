@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>列表</title>
+	<script src="/lib/requirejs/require.js" data-main="/js/list"></script>
+</head>
+<body>
+	<div class="header"></div>
+
+	<div class="main">
+		
+	</div>
+
+	<script type="text/html" id="list_template">
+		{{each products as product}}
+		<div>
+			<div class="title">{{product.title}}</div>
+			<div class="price">{{product.price}}</div>
+			<div class="add">加入购物车</div>
+		</div>
+		{{/each}}
+	</script>
+
+	<div class="footer"></div>
+</body>
+</html>
