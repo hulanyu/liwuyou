@@ -1,0 +1,219 @@
+*{margin:0;padding:0;box-sizing:border-box;}
+fieldset, img { border:none; }
+
+img{vertical-align: top;}
+
+em,i,strong,b{ font-style:normal; font-weight:normal; }
+
+ul, ol { list-style:none; } 
+
+a {text-decoration:none; color: black; }
+.top{
+	padding:60px 0;
+	height:200px;
+	background:#fff;
+	.center{
+			width:1200px;
+			height:80px;
+			margin:0 auto;
+			
+			.top_box1{
+				float:left;
+				width:207px;
+				height:80px;
+				padding:13px 0 0 27px;
+				border-right:1px solid #e2e2e2;
+				.icon{
+					margin-right:60px;
+					margin-left:20px;
+					width:152px;
+					height:62px;
+					display:inline-block;
+					background:url(../images/bgr.png);
+					background-position:0 -58px;
+				}
+			}
+			.top_box2,.top_box3{
+				float:left;
+				height:80px;
+
+				border-right:1px solid #e2e2e2;
+			}
+			.top_box2{
+				width:455px;	
+				padding:5px 30px 0;
+			}
+			.top_box3{
+				width:256px;
+				padding:5px 60px 0;
+				.fb{
+					width:135px;
+					font-size:16px;
+					font-weight:700;
+				}
+				.m-t-10{
+					margin-top:10px;
+					.icon-bgr{
+						display:inline-block;
+						vertical-align:middle;
+						margin-top:-3px;
+						background:url(../images/bgr.png);
+					}
+					.icon-sina{
+						width:28px;
+						height:24px;
+						background-position:0 -276px;
+					}
+					.icon-tencent{
+						margin-left:10px;
+						width:24px;
+						height:24px;
+						background-position:-29px -276px;
+					}
+					.icon-wechat{
+						margin-left:10px;
+						width:30px;
+						height:24px;
+						background-position:-54px -276px;
+						.pic-wx{
+							width:142px;
+							height:151px;
+							background:url(../images/wx.png);
+							position:absolute;
+							top:-151px;
+							left:0;
+							display:block;
+						}
+					}
+				}
+			}
+			.top_box4{
+				float:left;
+				width:254px;
+				height:80px;
+				text-align:center;
+				.f24{
+					font-size:24px;
+					font-weight:700;
+				}
+				.f12{
+					font-size:12px;
+				}
+				.qqbtn{
+					font-size:14px;
+					width:146px;
+					height:28px;
+					line-height:14px;
+					margin-top:10px;
+					display:inline-block;
+					outline:0;
+					padding:5px 30px;
+					border:2px solid #ebebeb;
+					border-radius:30px;
+				}
+
+			}
+	}
+}
+.bottom{
+	height:357px;
+	width: 100%;
+	background:#484442;
+	color:#e7e7e7;
+	.center{
+			width:1200px;
+			margin:0 auto;
+			height:135px;
+			padding: 45px 60px;
+			font-size:18px;
+			font-weight: 700;
+			border-bottom: 1px solid #666666;
+			.f1{
+				float:left;
+				width:260px;
+				height:49px;
+				line-height: 49px;
+				padding-left: 30px;
+				margin-left: 10px;
+				.bc{
+					margin-right: 16px;
+					background-position: 0 0;
+					width:52px;
+					height:52px;
+					display: inline-block;
+					margin-top: -3px;
+					vertical-align: middle;
+					background: url(../images/bgr1.png);
+				}
+				.bc2{
+					background-position: -53px 0;
+				}
+				.bc3{
+					background-position: -106px 0;
+				}
+				.bc4{
+					background-position: -159px 0;
+				}
+			}
+
+	}
+	.cd{
+		width: 1200px;
+		padding: 40px 30px;
+		height:103px;
+		line-height: 103px;
+		border-bottom: 1px solid #666666;
+		margin: 0 auto;
+		.fl{
+				float:left;
+				color: #c3c3c3;
+				width:240px;
+				height:21px;
+				line-height: 21px;
+				span{
+					font-size: 12px;
+					color: #c3c3c3;
+					margin-right: 16px;
+					a{
+						color: #c3c3c3;
+					}		
+			}
+		}
+		.fr{
+			width: 425px;
+			height:18px;
+			line-height: 18px;
+			float: right;
+			font-size: 12px;
+			a{
+				padding: 8px;
+				
+				color: #c3c3c3;
+			}
+		}
+	}
+	.under{
+		width:1200px;
+		hieght:115px;
+		margin: 0 auto;
+		font-size: 12px;
+		padding: 25px 30px;
+		.link{
+			width: 1140px;
+			.linkl{
+				width:910px;
+				float: left;
+				a{
+					color: #c3c3c3;
+				}
+			}
+			.fr{
+				float:right;
+				display: inline-block;
+				width:128px;
+				height: 52px;
+				background: url(../images/newGovIcon.gif);
+			}
+		}
+	}
+}

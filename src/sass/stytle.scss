@@ -1,0 +1,256 @@
+*{margin:0;padding:0;box-sizing:border-box;}
+fieldset, img { border:none; }
+
+img{vertical-align: middle;}
+
+em,i,strong,b{ font-style:normal; font-weight:normal; }
+
+ul, ol { list-style:none; } 
+
+a {text-decoration:none; color: black; outline:0;}
+.main{
+	.banner{
+		width:100%;
+		height:430px;
+		background:pink;
+		position:relative;
+		img{
+			width:100%;
+			height:100%;
+		}
+		.pages {
+			height: 30px;
+			position: absolute;
+			bottom:0;
+			 i {
+				width:20px;
+				height: 20px;
+				border-radius: 10px;
+				background: #fff;
+				display: inline-block;
+				margin:5px;
+				&.current {
+					background: #f00;
+				}
+		}
+		}
+		
+	}
+	.services{
+		width:100%;
+		height:109px;
+		padding:30px 0;
+		.center{
+			width:1200px;
+			height:49px;
+
+			margin:0 auto;
+			.f2{
+				width:300px;
+				height:49px;
+				line-height:49px;
+				padding-left:35px;
+				color:#666;
+				font-size:18px;
+				float:left;
+				.bgr1{
+					margin-left:16px;
+					display:inline-block;
+					margin-top:-3px;
+					vertical-align:middle;
+					width:52px; 
+					height:52px;
+					background:url(../images/bgr1.png);
+					background-position:0 -53px;
+				}
+				.top2{
+					background-position:-53px -53px;
+				}
+				.top3{
+					background-position:-106px -53px;
+				}
+				.top4{
+					background-position:-159px -53px;
+				}
+			}
+		}
+	}
+	.index-list{
+		width:100%;
+		
+		padding:45px 0 80px;
+		background:#f5f5f5;
+		.center1{
+			width:1200px;
+			margin:0 auto;
+			a{
+				img{
+					margin-left:8px;
+				}
+			}
+		}
+		.center2{
+			width:1200px;
+			margin:0 auto;
+			margin-top:60px;
+			.sec{
+				height:30px;
+				line-height:30px;
+				background:url(../images/diy-title.png) center no-repeat;
+				h3{
+					float:left;
+					height:30px;
+					line-height:30px;
+					padding:0 20px 0 10px;
+					color:#666;
+					font-size:20px;
+					font-weight:400;
+				}
+				.ic1{
+					float:right;
+					padding:0 10px;
+					color:#666;
+					font-size:16px;
+
+				}
+			}
+			.index-content{
+				margin-top:20px;
+				.p1{
+					a{
+						display:inline-block;
+						img{
+							margin-left:8px;
+						}
+					}
+				}
+				.p2{
+					margin-top:15px;
+					a{
+						display:inline-block;
+						img{
+							margin-left:8px;
+						}
+					}
+				}
+
+			}	
+			
+		}
+		.center3{
+			width:1200px;
+			margin:0 auto;
+			margin-top:60px;
+			.sec{
+				height:30px;
+				line-height:30px;
+				background:url(../images/diy-title.png) center no-repeat;
+				h3{
+					float:left;
+					height:30px;
+					line-height:30px;
+					padding:0 20px 0 10px;
+					color:#666;
+					font-size:20px;
+					font-weight:400;
+				}
+				.ic1{
+					float:right;
+					padding:0 10px;
+					color:#666;
+					font-size:16px;
+
+				}
+			}
+			.box{
+				margin-top:28px;
+				height:567px;
+				.fl{
+					float:left;
+					a{
+						dispaly:inline-block;
+					}
+				}
+				.fr1{
+					width:968px;
+					float:right;
+					display:flex;
+					justify-content:space-around;
+					flex-wrap:wrap;
+					li{
+						width:24%;
+						height:276px;
+						background:#fff;
+						text-align:center;
+						line-height:30px;
+						img{
+						margin-bottom:10px;
+						}
+						&:nth-child(5){
+						margin-top:15px;
+						}
+						&:nth-child(6){
+						margin-top:15px;
+						}&:nth-child(7){
+						margin-top:15px;
+						}&:nth-child(8){
+						margin-top:15px;
+						}
+					}
+				}
+			}
+		}
+		.center4{
+			width:1200px;
+			margin:0 auto;
+			margin-top:60px;
+			.sec{
+				height:30px;
+				line-height:30px;
+				background:url(../images/diy-title.png) center no-repeat;
+				h3{
+					float:left;
+					height:30px;
+					line-height:30px;
+					padding:0 20px 0 10px;
+					color:#666;
+					font-size:20px;
+					font-weight:400;
+				}	
+			}
+			.yy{
+					margin-top:28px;
+					width:1200px;
+					display:flex;
+					justify-content:space-around;
+					flex-wrap:wrap;
+					li{
+						width:24%;
+						height:367px;
+						background:#fff;
+						text-align:left;
+						line-height:30px;
+						img{
+						margin-bottom:10px;
+						}
+						p{
+							font-size:13px;
+							line-hieght:1.5;
+							min-height:63px;
+							margin-top:20px;
+						}
+						span{
+							display:block;
+							font-size:12px;
+						}
+						.s1{
+							margin-top:10px;
+							color:#9e9e9e;
+						}
+						
+					}
+			}
+		}
+		
+	}
+}

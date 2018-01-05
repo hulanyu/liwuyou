@@ -18,9 +18,18 @@ define(["jquery", "cookie"], function($){
 		});
 	}).done(function(){
 		// 如果有用户登录成功，则显示欢迎信息
-		var user = $.cookie("loginUser");
+		/*var user = $.cookie("loginUser");
 		if (user)
-			$(".login_reg").html("欢迎你：<a href='personal.html'>"+ user +"</a>")
+			$(".login_reg").html("欢迎你：<a href='personal.html'>"+ user +"</a>")*/
+		//当鼠标滑过显示导航内容
+		$("#category").mouseover(function(){
+			$("#category_pop").show();
+		})
+	}).done(function(){
+		//当鼠标滑过显示导航内容
+		$("#category").mouseout(function(){
+			$("#category_pop").hide();
+		})
 	});
 
 	// 将 footer.html 加载显示到 div.footer 中

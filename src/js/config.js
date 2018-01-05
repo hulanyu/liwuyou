@@ -6,11 +6,15 @@ require.config({
 		"zoom" : "lib/jquery_plugins/jquery.elevateZoom",
 		"fly" : "lib/jquery_plugins/jquery.fly",
 		"template" : "lib/arttemplate/template",
-		"load" : "js/loadHeaderFooter"
+		"load" : "js/loadHeaderFooter",
+		"carousel":"js/carousel"
 	},
 	shim : {
 		"zoom" : {
 			deps : ["jquery"]
+		},
+		"carousel":{
+			deps:["jquery"]
 		}
 	}
 });
