@@ -1,0 +1,12 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>购物车</title><link rel="stylesheet" href="/css/base.css"><link rel="stylesheet" href="/css/stytle.css"><script src="/lib/requirejs/require.js" data-main="/js/cart"></script></head><body><div class="header"></div><div class="cart"><h1>查看购物车</h1><div class="cart_title"><div><label><input type="checkbox" class="ck_all">全选</label></div><div class="img">图像</div><div class="title">标题</div><div class="price">价格</div><div class="amount">数量</div><div class="sub">小计</div><div class="oper">操作</div></div><div class="cart_body"></div><div class="total">合计:<span class="money">0.00</span>元</div></div><div class="footer"></div><!-- 定义显示购物车模板 --><script type="text/html" id="cart_template">{{each products as product}}
+	<div class="product">
+		<div class="ck"><input type="checkbox" class="ck_product"></div>
+		<div class="id" style="display: none;">{{product.id}}</div>
+		<div class="img"><img src="{{product.img}}" style="width:90px;height: 80px;"></div>
+		<div class="title">{{product.title}}</div>
+		<div class="price">{{product.price}}</div>
+		<div class="amount"><span class="minus">-</span><input type="text" class="amount_num" value="{{product.amount}}" style="width: 40px;text-align: center;"><span class="add">+</span></div>
+		<div class="sub">{{product.price*product.amount}}</div>
+		<div class="oper"><a href="javascript:void(0)" class="del">删除</a></div>
+	</div>
+	{{/each}}</script></body></html>

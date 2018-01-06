@@ -1,1 +1,1 @@
-"use strict";require(["config"],function(){require(["load"],function(){})});
+"use strict";require(["config"],function(){require(["load"],function(){$.cookie.json=!0,$("#sub").click(function(){var s="http://10.7.187.99/username.php?userP="+$("#userP").val()+"&password="+$("#password").val();$.ajax({url:s,type:"GET",datatype:"json",success:function(s){}}),location="/index.html"})})});

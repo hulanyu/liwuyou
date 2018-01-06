@@ -24,12 +24,42 @@ define(["jquery", "cookie"], function($){
 		//当鼠标滑过显示导航内容
 		$("#category").mouseover(function(){
 			$("#category_pop").show();
-		})
+		});
+
 	}).done(function(){
-		//当鼠标滑过显示导航内容
+		//当鼠标移出隐藏导航内容
 		$("#category").mouseout(function(){
 			$("#category_pop").hide();
-		})
+		});
+	}).done(function(){
+		//当鼠标滑过显示登录注册
+		$("#user").mouseover(function(){
+			$(".username").show();
+
+		});
+		$(".username").mouseover(function(){
+			$(".username").show();
+
+		});
+	}).done(function(){
+		//当鼠标移出隐藏登录注册
+		$("#user").mouseout(function(){
+			$(".username").hide();
+		});
+		$(".username").mouseout(function(){
+			$(".username").hide();
+		});
+	}).done(function(){
+		//当鼠标滑过显示登录注册
+		$("#car").mouseover(function(){
+			$(".car-box").show();
+
+		});
+	}).done(function(){
+		//当鼠标移出隐藏登录注册
+		$("#car").mouseout(function(){
+			$(".car-box").hide();
+		});
 	});
 
 	// 将 footer.html 加载显示到 div.footer 中
