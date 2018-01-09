@@ -4,6 +4,15 @@ define(["jquery", "cookie"], function($){
 	$.ajax("/html/include/header.html").done(function(data){
 		$(".header").html(data);
 	}).done(function(){
+		$(document).ready(function(){
+			var loginuser=$.cookie('key');
+			if(loginuser){
+					$(".ss").html(loginuser);
+					$(".tui").show();
+			}
+		
+		});
+	}).done(function(){
 		// 绑定查找的键盘按键事件
 		$(".search .word").keyup(function(){
 			var url = "https://suggest.taobao.com/sug?code=utf-8&q="+ $(this).val() +"&callback=?";
@@ -17,10 +26,6 @@ define(["jquery", "cookie"], function($){
 			});
 		});
 	}).done(function(){
-		// 如果有用户登录成功，则显示欢迎信息
-		/*var user = $.cookie("loginUser");
-		if (user)
-			$(".login_reg").html("欢迎你：<a href='personal.html'>"+ user +"</a>")*/
 		//当鼠标滑过显示导航内容
 		$("#category").mouseover(function(){
 			$("#category_pop").show();
@@ -60,6 +65,16 @@ define(["jquery", "cookie"], function($){
 		$("#car").mouseout(function(){
 			$(".car-box").hide();
 		});
+	
+	}).done(function(){
+		$(".tui").click(function(){
+			
+			var _user=$.cookie("key",user,{expires:-1,path:"/"});
+			
+			if(_user===false){
+				$(".ss").html("<a href='/html/login.html'>"+"登录"+"</a>"+"/"+"<a href='/html/register.html'>"+"注册"+"</a>");
+			}
+		})
 	});
 
 	// 将 footer.html 加载显示到 div.footer 中

@@ -12,15 +12,17 @@
 
 	<div class="md-box">
 		<div class="cent">
-			<form action="" method="post" id="formUser">
+			<form action="register.php" method="post" id="formUser">
 				<div class="title">
 					<h2>注册礼无忧账号</h2>
 				</div>
-				<input type="text" id="userP" placeholder="请输入手机号">
+
+				<input type="text" id="userP" placeholder="请输入用户名或邮箱"><span id="username_info"></span><span id="username_info1"></span>
 				<input type="password" id="password" placeholder="请输入密码6-12位">
-				<input type="password" id="passwordP" placeholder="再次输入密码">
+				<input type="password" id="passwordP" placeholder="再次输入密码"><br>
+				验证码:<input type="text" class="inputT"><img src="" class="vali"><span class="info1"></span>
 				<p>注册即视为同意<a href="#">《礼无忧用户注册协议》</a></p>
-				<input type="button" id="sub" value="立即注册">
+				<input type="submit" id="sub" value="立即注册">
 			</form>
 		</div>
 	</div>

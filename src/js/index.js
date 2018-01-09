@@ -9,7 +9,7 @@ require(["config"], function(){
 				{src:"../images/bg5.jpg",href:"#"}
 
 			],
-			width:1263,
+			width:"100%",
 			height:430,
 			type:"fade",
 			duration:2000

@@ -3,8 +3,8 @@
 	"res_error" : "",
 	"res_body" : {
 		"data" : [
-			{"id":1,"price":599.00,"title":"爱入微景","img":"/images/99.jpg"},
-			{"id":2,"price":599.00,"title":"爱恋云端","img":"/images/100.jpg"},
+			{"id":1,"price":68.00,"title":"爱入微景","img":"/images/99.jpg"},
+			{"id":2,"price":129.00,"title":"爱恋云端","img":"/images/100.jpg"},
 			{"id":3,"price":599.00,"title":"你是我的宇宙","img":"/images/88.jpg"},
 			{"id":4,"price":98.00,"title":"爱心暖手宝","img":"/images/77.jpg"},
 			{"id":5,"price":169.00,"title":"浪漫一生","img":"/images/66.jpg"},

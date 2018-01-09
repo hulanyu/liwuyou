@@ -12,7 +12,7 @@ require(["config"], function(){
 		//配置cookie插件的json数据自动转换
 		$.cookie.json=true;
 		//利用事件委派，为"加入购物车"绑定点击事件
-	//保存:[{},{},{}]
+		//保存:[{},{},{}]
 	$(".buy").delegate(".add_to_cart","click",function(event){
 		//当前"加入购物车"父级元素
 		var _box=$(this).parent();
@@ -22,7 +22,7 @@ require(["config"], function(){
 			title:_box.children(".title").text(),
 			price:_box.children(".price").text(),
 			amount:1,
-			img:_box.children(".img").attr("src")
+			img:_box.children("#img").attr("src")
 		};
 		//查找cookie中已有的购物车结构
 		var _products=$.cookie("products") || [];
@@ -38,7 +38,7 @@ require(["config"], function(){
 		//将数组存会cookie中
 		$.cookie("products",_products,{expires:7,path:"/"});
 		/*加入购物车成功的抛物线效果*/
-		var flyer=$(`<img src="${_box.children(".img").attr("src")}">`);
+		var flyer=$(`<img src="${_box.children("#img").attr("src")}">`);
 		flyer.fly({
 			start:{
 				left:event.pageX,
@@ -52,6 +52,9 @@ require(["config"], function(){
 			}
 		});
 	});
+	$(".buy").delegate("#img","click",function(event){
+		location="/html/detail.html";
+	});
 	//查找id所表示的商品所在products中的位置
 	function exist(id,products){
 		var idx=-1;
@@ -63,6 +66,7 @@ require(["config"], function(){
 		});
 		return idx;
 	}
+
 	});
-	
+
 });
