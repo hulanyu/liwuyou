@@ -252,6 +252,49 @@ a {text-decoration:none; color: black; outline:0;}
 		}
 		
 	}
+	.tool{
+		width: 60px;
+		height: auto;
+		position: fixed;
+		right: 60px;
+		bottom: 10%;
+		z-index: 99;
+		text-align: center;
+		a{
+			display: inline-block;
+			width: 60px;
+			height: 60px;
+			line-height: 60px;
+			background: #656766;
+			.icon-qq{
+			width: 35px;
+			height: 34px;
+			display: inline-block;
+			vertical-align: middle;
+			margin-top: -3px;
+			background: url(../images/bgr.png);
+			background-position: -190px -77px;
+		}
+		}
+		.mt{
+			margin-top: 10px;
+			display: inline-block;
+			width: 60px;
+			height: 60px;
+			line-height: 60px;
+			background: #656766;
+			.icon-top{
+			width: 35px;
+			height: 18px;
+			display: inline-block;
+			vertical-align: middle;
+			margin-top: -3px;
+			background: url(../images/bgr.png);
+			background-position: -190px -112px;
+		}
+		}
+		
+	}
 }
 .md-box{
 	width:100%;
@@ -457,6 +500,20 @@ a {text-decoration:none; color: black; outline:0;}
 			bottom:0;
 			border: 1px solid;
 		}
+		.btn{
+			position: fixed;
+			right: 20px;
+			top: 100px;
+			display: inline-block;
+			width: 100px;
+			height: 40px;
+			line-height: 40px;
+			text-align: center;
+			background: red;
+			color: white;
+			border:0;
+			outline: 0;
+		}
 
 
 }
@@ -509,48 +566,35 @@ a {text-decoration:none; color: black; outline:0;}
 			margin:0 auto;
 			margin-top: 60px;
 			zoom:1;
-			.img-sm{
+				#pics{
 				width:80px;
 				float: left;
-				margin-left:60px;
-				.focus{
-					border-color: #d93732;
+				margin-left:0px;
 				}
-				img{
-					width:68px;
-					height:68px;
-					border:1px solid #e6e6e6;
-					vertical-align: middle;
-				}
-				.m-t-16{
-				margin-top: 40px;
-				}
-
-			}
-			.img-bg{
-				width:500px;
-				float: left;
-				img{
-					width:100%;
-					vertical-align: middle;
-					border:0;
-				}
+				#imgwrapper{
+					width:400px;
+					float: left;
+					img{
+						width:100%;
+						vertical-align: middle;
+						border:0;
+					}
 			}
 			.goods-attr{
 				width:485px;
 				float: right;
-				h2{
+				.title{
 					line-height: 1;
 					font-size: 30px;
-
+					font-weight: 700;
 				}
 				p{
 					margin-top: 20px;
 					color:#666;
 					font-size:14px;
-
 				}
-				.pe{
+				.price{
+					width: 485px;
 					padding:20px 0;
 					border-width: 1px 0;
 					border-style: solid;
@@ -559,90 +603,28 @@ a {text-decoration:none; color: black; outline:0;}
 					height: 66px;
 					line-height: 66px;
 					zoom:1;
-					.fll{
-						color:#d93732;
-						font-size:24px;
-						font-weight: 700;
-						float: left;
-						line-height: 1;
-					}
-					.frr{
-						color: #666;
-						float:right;
-						line-height: 1;
-					}
+					color:#d93732;
+					font-size:24px;
+					font-weight: 700;
+					line-height: 1;
 				}
-				.p-y{
-					padding:20px 0;
-					line-height: 34px;
-					margin-top: 20px;
-					.sl{
-						display: inline-block;
-						border:1px solid #fff;
-						float:left;
-						color:#666;
-					}
-					.sr{
-						display: inline-block;
-						border:1px solid #fff;
-						float: left;
-						line-height: 34px;
-						a{
-							padding: 0 20px;
-							border: 1px solid #e8e8e8;
-							margin-bottom: 10px;
-							margin-right: 8px;
-							color: #333;
-						}
-					}
-				}
-				.btn{
+			
+				.add{
 					border-bottom: 1px solid #e6e6e6;
 					padding-bottom: 30px;
 					height: 75px;
+					line-height: 75px;
 					margin-top: 20px;
 					line-height: 1;
-					zoom:1;
-					.dd{
-						padding: 15px 180px;
-						display: inline-block;
-						color: #fff;
-						background: #d93732;
-						border-radius: 3px;
-						float: left;
-					}
-					.bg{
-						float: right;
-						display: inline-block;
-						width: 44px;
-						height: 44px;
-						background: #e2e2e2;
-						border-radius: 3px;
-						.icon-heart{
-							margin: 14px 13px;
-							width: 18px;
-							height: 16px;
-							display: inline-block;
-							vertical-align: middle;
-							background: url(../images/bgr.png);
-							background-position: -205px -16px;
-						}
-					}
+					text-align: center;
+					padding: 15px 180px;
+					color: #fff;
+					background: #d93732;
+					border-radius: 3px;	
 				}
-				.la{
-					padding-top: 30px;
-					.icon-item{
-						display: inline-block;
-						width: 16px;
-						height: 16px;
-						margin-right: 10px;
-						vertical-align: middle;
-						margin-top: -3px;
-						background: url(../images/bgr.png);
-						background-position: -224px -16px;
-					}
+			
 				}
-			}
+			
 		}
 		.detail{
 			width: 100%;
@@ -679,4 +661,138 @@ a {text-decoration:none; color: black; outline:0;}
 			}
 		}
 	}
+	.tool{
+		width: 60px;
+		height: auto;
+		position: fixed;
+		right: 60px;
+		bottom: 10%;
+		z-index: 99;
+		text-align: center;
+		a{
+			display: inline-block;
+			width: 60px;
+			height: 60px;
+			line-height: 60px;
+			background: #656766;
+			.icon-qq{
+			width: 35px;
+			height: 34px;
+			display: inline-block;
+			vertical-align: middle;
+			margin-top: -3px;
+			background: url(../images/bgr.png);
+			background-position: -190px -77px;
+		}
+		}
+		.mt{
+			margin-top: 10px;
+			display: inline-block;
+			width: 60px;
+			height: 60px;
+			line-height: 60px;
+			background: #656766;
+			.icon-top{
+			width: 35px;
+			height: 18px;
+			display: inline-block;
+			vertical-align: middle;
+			margin-top: -3px;
+			background: url(../images/bgr.png);
+			background-position: -190px -112px;
+		}
+		}
+		
+	}
+}
+.queren{
+	width:100%;
+	min-height: 1000px;
+	padding: 0 10px;
+	padding-bottom:10px;
+	background:#f5f5f5;
+	.top1{
+		width:100%;
+		height: 62px;
+		padding: 20px;
+		line-height: 22px;
+		zoom:1;
+		.ll{	
+			width:100px;
+			float: left;
+			font-size: 12px;
+		}
+		.rr{
+			width:400px;
+			float: right;
+			font-size: 12px;
+			.ra{
+				display: inline-block;
+				width: 86px;
+				height:18px;
+				line-height: 15px;
+				border: 2px solid #979795;
+				border-radius: 22px;
+				color:#666;
+				text-align: center;
+
+			}
+		}
+	}
+	.cart_title div, .product div {
+			width:100px;
+			height:30px;
+			line-height: 30px;
+			text-align: center;
+			border:1px solid;
+			float:left;
+		}
+	.product div {
+			height: 90px;
+			line-height: 90px;
+			overflow: hidden;
+		}
+	.cart_title, .cart_body, .product {
+			clear:both;
+		}
+		.minus, .add {
+			width:20px;
+			height:30px;
+			line-height: 30px;
+			display: inline-block;
+			border:1px solid;
+			cursor:pointer;
+		}
+		.cart_title .title, .product .title {
+			width:300px;
+		}
+		.total {
+			width:100%;
+			height:50px;
+			line-height: 50px;
+			position: absolute;
+			bottom:0;
+			border: 1px solid;
+			text-align: center;
+			p{
+				
+				float:left;
+				
+			}
+			#sub{
+				width:10%;
+				float: right;
+				height:50px;
+				text-align: center;
+				border: 0;
+				line-height: 50px;
+				border-radius: 2px;
+				background: red;
+				color: white;
+				outline: 0;
+
+			}
+		}
+
+
 }

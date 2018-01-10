@@ -52,7 +52,12 @@ require(["config"], function(){
 			}
 		});
 	});
+	//跳转到详情页面
 	$(".buy").delegate("#img","click",function(event){
+		var box=$(this).parent();
+		var _id=box.children(".id").text();
+		/*console.log(_id);*/
+		$.cookie("id",_id,{expires:7,path:"/"});
 		location="/html/detail.html";
 	});
 	//查找id所表示的商品所在products中的位置
@@ -66,6 +71,8 @@ require(["config"], function(){
 		});
 		return idx;
 	}
+	
+
 
 	});
 

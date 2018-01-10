@@ -13,6 +13,19 @@ define(["jquery", "cookie"], function($){
 		
 		});
 	}).done(function(){
+		$("#car").mouseover(function(){
+				$.cookie.json=true;
+	//读取cookie中保存的购物车数据
+	var _products=$.cookie("products") || [];
+	//判断
+	if(_products.length ===0){
+		//购物车为空
+		$(".car-box").show();
+		return;
+	}
+});
+	
+	}).done(function(){
 		// 绑定查找的键盘按键事件
 		$(".search .word").keyup(function(){
 			var url = "https://suggest.taobao.com/sug?code=utf-8&q="+ $(this).val() +"&callback=?";
@@ -55,26 +68,24 @@ define(["jquery", "cookie"], function($){
 			$(".username").hide();
 		});
 	}).done(function(){
-		//当鼠标滑过显示登录注册
-		$("#car").mouseover(function(){
-			$(".car-box").show();
-
-		});
-	}).done(function(){
 		//当鼠标移出隐藏登录注册
 		$("#car").mouseout(function(){
 			$(".car-box").hide();
 		});
 	
 	}).done(function(){
-		$(".tui").click(function(){
-			
+			$(".tui").click(function(){
+
 			var _user=$.cookie("key",user,{expires:-1,path:"/"});
 			
 			if(_user===false){
 				$(".ss").html("<a href='/html/login.html'>"+"登录"+"</a>"+"/"+"<a href='/html/register.html'>"+"注册"+"</a>");
+
 			}
-		})
+			location.reload();
+		});
+	
+		
 	});
 
 	// 将 footer.html 加载显示到 div.footer 中

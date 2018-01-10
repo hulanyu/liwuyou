@@ -95,7 +95,7 @@ require(["config"], function(){
 			return;
 		}
 		//数量修改成功
-		_prod,amount=$(this).val();
+		_prod.amount=$(this).val();
 		//保存回cookie中
 		$.cookie("products",_products,{expires:7,path:"/"});
 		//显示小计
@@ -126,8 +126,15 @@ require(["config"], function(){
 		var sum=0;
 		$(".ck_product:checked").each(function(index,element){
 			sum+=Number($(this).parents(".product").children(".sub").text());
+		
 		});
 		$(".total .money").text(sum.toFixed(2));
+
 	}
+	/*****************************************************************/
+	/*确认订单*/
+	$(".btn").click(function(){
+		location="/html/confirm.html";
 	})
+	});
 });
