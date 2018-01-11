@@ -32,8 +32,7 @@ a {text-decoration:none; color: black; outline:0;}
 					background: #f00;
 				}
 		}
-		}
-		
+		}	
 	}
 	.services{
 		width:100%;
@@ -237,6 +236,9 @@ a {text-decoration:none; color: black; outline:0;}
 							line-hieght:1.5;
 							min-height:63px;
 							margin-top:20px;
+							&:hover a{
+								color:red;
+							}	
 						}
 						span{
 							display:block;
@@ -323,6 +325,12 @@ a {text-decoration:none; color: black; outline:0;}
 				width:110px;
 			}
 			#username_info{
+				display: block;
+			}
+			#username_info1{
+				display: block;
+			}
+			#username_info2{
 				display: block;
 			}
 			.vali{
@@ -426,7 +434,7 @@ a {text-decoration:none; color: black; outline:0;}
 }
 .list{
 	width:100%;
-	min-height: 1000px;
+	min-height:700px;
 	position: relative;
 	.buy{
 		width:100%;
@@ -451,6 +459,8 @@ a {text-decoration:none; color: black; outline:0;}
 					color:#fff;
 				} 
 				#img{
+					width:200px;
+					height:200px;
 					cursor: pointer;
 				}
 			}
@@ -556,11 +566,8 @@ a {text-decoration:none; color: black; outline:0;}
 		background: #fff;
 		overflow: hidden;
 		width:100%;
-	
-	
 		padding-bottom: 60px;
 		.gb{
-			
 			width:1200px;
 			min-height: 500px;
 			margin:0 auto;
@@ -570,6 +577,9 @@ a {text-decoration:none; color: black; outline:0;}
 				width:80px;
 				float: left;
 				margin-left:0px;
+				img{
+					padding-bottom: 10px;
+				}
 				}
 				#imgwrapper{
 					width:400px;
@@ -608,19 +618,18 @@ a {text-decoration:none; color: black; outline:0;}
 					font-weight: 700;
 					line-height: 1;
 				}
-			
 				.add{
 					border-bottom: 1px solid #e6e6e6;
 					padding-bottom: 30px;
 					height: 75px;
-					line-height: 75px;
+					line-height: 50px;
 					margin-top: 20px;
-					line-height: 1;
 					text-align: center;
 					padding: 15px 180px;
 					color: #fff;
 					background: #d93732;
 					border-radius: 3px;	
+					cursor: pointer;
 				}
 			
 				}
@@ -707,10 +716,37 @@ a {text-decoration:none; color: black; outline:0;}
 }
 .queren{
 	width:100%;
-	min-height: 1000px;
+	min-height: 895px;
 	padding: 0 10px;
 	padding-bottom:10px;
 	background:#f5f5f5;
+	position: relative;
+	.get_money{
+		width:430px;
+		height: 200px;
+		position: absolute;
+		top:125px;
+		left:360px;
+		background: pink;
+		opacity: .8;
+		border-radius: 5px;
+		text-align: center;
+		line-height: 200px;
+		.close{
+			position: absolute;
+			top:0px;
+			right: 0px;
+		}
+		.confirm{
+			position: absolute;
+			bottom: 50px;
+			left:178px;
+			width:50px;
+			height:20px;
+			text-align: center;
+			line-height: 20px;
+		}
+	}
 	.top1{
 		width:100%;
 		height: 62px;
@@ -767,7 +803,7 @@ a {text-decoration:none; color: black; outline:0;}
 			width:300px;
 		}
 		.total {
-			width:100%;
+			width:99%;
 			height:50px;
 			line-height: 50px;
 			position: absolute;

@@ -26,17 +26,17 @@ require(["config"], function(){
 				<a href="#" data-image="${element.b_img1}" data-zoom-image="${element.t_img1}" class="focus">
 						<img src="${element.s_img1}" class="img" >
 				</a>
-				<a href="#" data-image="${element.b_img2}" data-zoom-image="${element.t_img2}" class="focus">
-						<img src="${element.s_img2}" class="img" >
+				<a href="#" data-image="${element.b_img2}" data-zoom-image="${element.t_img2}">
+						<img src="${element.s_img2}">
 				</a>
-				<a href="#" data-image="${element.b_img3}" data-zoom-image="${element.t_img3}" class="focus">
-						<img src="${element.s_img3}" class="img" >
+				<a href="#" data-image="${element.b_img3}" data-zoom-image="${element.t_img3}">
+						<img src="${element.s_img3}">
 				</a>
-				<a href="#" data-image="${element.b_img4}" data-zoom-image="${element.t_img4}" class="focus">
-						<img src="${element.s_img4}" class="img" >
+				<a href="#" data-image="${element.b_img4}" data-zoom-image="${element.t_img4}">
+						<img src="${element.s_img4}">
 				</a>
-				<a href="#" data-image="${element.b_img5}" data-zoom-image="${element.t_img5}" class="focus">
-						<img src="${element.s_img5}" class="img" >
+				<a href="#" data-image="${element.b_img5}" data-zoom-image="${element.t_img5}">
+						<img src="${element.s_img5}">
 				</a>
 			</div>
 			<div id="imgwrapper">
@@ -44,7 +44,7 @@ require(["config"], function(){
 			</div>
 			<div class="goods-attr">
 				<div class="id" style="display: none;">${element.id}</div>
-				<img src="${element.t_img1}" style="display:none"/>
+				<img src="${element.s_img1}" class="img" style="display:none;">
 				<div class="title">${element.title}</div>
 				<p class="jieshao">
 					${element.jieshao}
@@ -67,13 +67,12 @@ require(["config"], function(){
                 borderSize: '1',//右侧放大镜边框尺寸
                 borderColour: '#dddddd' //右侧放大镜边框颜色
             });
-            
-		});
-		//利用事件委派，为"加入购物车"绑定点击事件
+            	//利用事件委派，为"加入购物车"绑定点击事件
 		//保存:[{},{},{}]
-	$(".goods-attr").delegate(".add","click",function(event){
+	$("div").delegate(".add","click",function(event){
+		event.stopPropagation();
 		//当前"加入购物车"父级元素
-		con
+		console.log("1");
 		var _box=$(this).parent();
 		//将当前选购商品的信息保存到对象中
 		var prod={
@@ -81,8 +80,9 @@ require(["config"], function(){
 			title:_box.children(".title").text(),
 			price:_box.children(".price").text(),
 			amount:1,
-			img:_box.children("#zoom-03").attr("src")
+			img:_box.children(".img").attr("src")
 		};
+		console.log(prod.img);
 		//查找cookie中已有的购物车结构
 		var _products=$.cookie("products") || [];
 		//判断当前选购商品是否在数组中已有选购
@@ -97,7 +97,7 @@ require(["config"], function(){
 		//将数组存会cookie中
 		$.cookie("products",_products,{expires:7,path:"/"});
 		/*加入购物车成功的抛物线效果*/
-		var flyer=$(`<img src="${_box.children("#img").attr("src")}">`);
+		var flyer=$(`<img src="${_box.children(".img").attr("src")}">`);
 		flyer.fly({
 			start:{
 				left:event.pageX,
@@ -122,6 +122,9 @@ require(["config"], function(){
 		});
 		return idx;
 	}
+	
+            
+		});
 	
 		
 	

@@ -24,6 +24,7 @@ require(["config"], function(){
 			amount:1,
 			img:_box.children("#img").attr("src")
 		};
+		console.log(prod.img);
 		//查找cookie中已有的购物车结构
 		var _products=$.cookie("products") || [];
 		//判断当前选购商品是否在数组中已有选购

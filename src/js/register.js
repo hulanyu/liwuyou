@@ -1,6 +1,7 @@
 require(["config"], function(){
 	require(["jquery","load"], function($){
 		$.cookie.json = true;
+		/****************************提交注册信息***********************************/
 		$("#formUser").submit(function(e){
 			//阻止表单默认提交
 			e=e ||event;
@@ -26,39 +27,63 @@ require(["config"], function(){
 				});
 				
 		});
+
+	/************************用户格式验证及是否该用户已经注册验证****************************/
 		$("#userP").blur(function(){
 			var  user = $("#userP").val(),
 				 reg=/^[a-zA-Z][a-zA-Z0-9_]{4,15}$/;
-			if(!reg.test(user)){
-				$("#username_info").text("用户信息有误,请输入正确的用户名");
-			}else{
+			if(user==""){
+				$("#username_info").text("请输入用户信息");
+			}else if(reg.test(user)){
 				$("#username_info").text("用户信息正确");
-			}
-			var urls = `http://10.7.187.99/check.php?userP=${user}`;
-			$.ajax({
-				url:urls,
-				type:"GET",
-				dataType:"json",
-				success:function(data){
-				/*	console.log(data);*/
-					
-
-					if(data.status!==0){
+				var urls = `http://10.7.187.99/check.php?userP=${user}`;
+				$.ajax({
+					url:urls,
+					type:"GET",
+					dataType:"json",
+					success:function(data){
+					/*	console.log(data);*/
+						if(data.status!==0){
+								
+								$("#username_info").text("可以使用");
+							}
+						else{
+								$("#username_info").text("该用户名已被注册");
 							
-							$("#username_info1").text("可以使用");
 						}
-					else{
-							$("#username_info1").text("该用户名已被注册");
-						
 					}
-				}
-				// error:function(){
-				// 	$("#username_info1").text("该账户已经被注册");
-				// }
 			});
+		}else{
+				$("#username_info").text("格式有误");
+			}
+				
+
+		});
+		/**********************密码验证*******************************/
+		$("#password").blur(function(){
+			var pass=$("#password").val(),
+				reg=/^\w{5,8}$/;
+			if(pass==""){
+				$("#username_info1").text("请输入密码");
+			}else if(reg.test(pass)){
+				$("#username_info1").text("请记住密码");
+			}else{
+				$("#username_info1").text("请输入含字母、数字6-8位地址");
+			}
+
+		});
+		$("#passwordP").blur(function(){
+			var pass=$("#password").val(),
+				passp=$("#passwordP").val();
+			if(passp==pass){
+				$("#username_info2").text("密码正确");
+			}else{
+				$("#username_info2").text("输入密码不一样");
+			}
 
 		});
 
+		/******************生成验证码并验证****************************/
 		function generate(){
 				var url="http://route.showapi.com/932-2?showapi_appid=29550&showapi_sign=08402fce064a484baad949d9a18f75e7";
 				var result=$.getJSON(url,function(data){

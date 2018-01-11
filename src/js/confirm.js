@@ -129,7 +129,26 @@ require(["config"], function(){
 			
 		});
 		$(".total .money").text(sum.toFixed(2));
+		return sum;
 	
 	}
+	$("#sub").click(function(){
+		var html=`您购买的商品总价为<span>${calcTotal()}</span>元,是否购买？
+					<button class="close">close</button>
+					<button class="confirm">确认</button>
+					`;
+		$(".get_money").show();
+		$(".get_money").html(html);
+		$(".close").click(function(){
+			$(".get_money").hide();
+		});
+		$(".confirm").click(function(){
+			$(".get_money").html("购买成功")
+			setTimeout(function(){
+				$(".get_money").hide();
+				location="/index.html";
+			},3000)
+		});
 	})
+	});
 });
